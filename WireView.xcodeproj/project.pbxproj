@@ -16,6 +16,8 @@
 		2DCBBC1D1534C0A1001BE91E /* WVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBBC1C1534C0A1001BE91E /* WVViewController.m */; };
 		2DCBBC201534C0A1001BE91E /* WVViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DCBBC1E1534C0A1001BE91E /* WVViewController_iPhone.xib */; };
 		2DCBBC231534C0A1001BE91E /* WVViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DCBBC211534C0A1001BE91E /* WVViewController_iPad.xib */; };
+		2DCBBC2B1534C0E7001BE91E /* WVDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBBC2A1534C0E7001BE91E /* WVDrawView.m */; };
+		2DCBBC321534C28F001BE91E /* WVTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBBC311534C28F001BE91E /* WVTuple.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +25,20 @@
 		2DCBBC091534C0A0001BE91E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2DCBBC0B1534C0A0001BE91E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2DCBBC0D1534C0A0001BE91E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2DCBBC111534C0A0001BE91E /* WireView-Info.plist */ = {isa = PBXFileReference; path = "WireView-Info.plist"; sourceTree = "<group>"; };
+		2DCBBC111534C0A0001BE91E /* WireView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WireView-Info.plist"; sourceTree = "<group>"; };
 		2DCBBC131534C0A0001BE91E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2DCBBC151534C0A0001BE91E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2DCBBC171534C0A0001BE91E /* WireView-Prefix.pch */ = {isa = PBXFileReference; path = "WireView-Prefix.pch"; sourceTree = "<group>"; };
-		2DCBBC181534C0A1001BE91E /* WVAppDelegate.h */ = {isa = PBXFileReference; path = WVAppDelegate.h; sourceTree = "<group>"; };
+		2DCBBC171534C0A0001BE91E /* WireView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WireView-Prefix.pch"; sourceTree = "<group>"; };
+		2DCBBC181534C0A1001BE91E /* WVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WVAppDelegate.h; sourceTree = "<group>"; };
 		2DCBBC191534C0A1001BE91E /* WVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WVAppDelegate.m; sourceTree = "<group>"; };
-		2DCBBC1B1534C0A1001BE91E /* WVViewController.h */ = {isa = PBXFileReference; path = WVViewController.h; sourceTree = "<group>"; };
+		2DCBBC1B1534C0A1001BE91E /* WVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WVViewController.h; sourceTree = "<group>"; };
 		2DCBBC1C1534C0A1001BE91E /* WVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WVViewController.m; sourceTree = "<group>"; };
 		2DCBBC1F1534C0A1001BE91E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WVViewController_iPhone.xib; sourceTree = "<group>"; };
 		2DCBBC221534C0A1001BE91E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WVViewController_iPad.xib; sourceTree = "<group>"; };
+		2DCBBC291534C0E7001BE91E /* WVDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVDrawView.h; sourceTree = "<group>"; };
+		2DCBBC2A1534C0E7001BE91E /* WVDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVDrawView.m; sourceTree = "<group>"; };
+		2DCBBC301534C28F001BE91E /* WVTuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVTuple.h; sourceTree = "<group>"; };
+		2DCBBC311534C28F001BE91E /* WVTuple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVTuple.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,10 @@
 				2DCBBC1E1534C0A1001BE91E /* WVViewController_iPhone.xib */,
 				2DCBBC211534C0A1001BE91E /* WVViewController_iPad.xib */,
 				2DCBBC101534C0A0001BE91E /* Supporting Files */,
+				2DCBBC291534C0E7001BE91E /* WVDrawView.h */,
+				2DCBBC2A1534C0E7001BE91E /* WVDrawView.m */,
+				2DCBBC301534C28F001BE91E /* WVTuple.h */,
+				2DCBBC311534C28F001BE91E /* WVTuple.m */,
 			);
 			path = WireView;
 			sourceTree = "<group>";
@@ -168,6 +178,8 @@
 				2DCBBC161534C0A0001BE91E /* main.m in Sources */,
 				2DCBBC1A1534C0A1001BE91E /* WVAppDelegate.m in Sources */,
 				2DCBBC1D1534C0A1001BE91E /* WVViewController.m in Sources */,
+				2DCBBC2B1534C0E7001BE91E /* WVDrawView.m in Sources */,
+				2DCBBC321534C28F001BE91E /* WVTuple.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

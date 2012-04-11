@@ -13,6 +13,7 @@
 @end
 
 @implementation WVViewController
+@synthesize drawview;
 
 - (void)viewDidLoad
 {

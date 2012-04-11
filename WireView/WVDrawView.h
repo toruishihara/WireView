@@ -1,5 +1,5 @@
 //
-//  WVViewController.h
+//  WVDrawView.h
 //  WireView
 //
 //  Created by 1 torui on 12/04/10.
@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WVDrawView.h"
 
-@interface WVViewController : UIViewController
-@property (nonatomic, assign) IBOutlet WVDrawView* drawview;
-
+@interface WVDrawView : UIView
 
 @end
