@@ -10,7 +10,7 @@
 
 @implementation WVTuple : NSObject
 
--(id)initWithX:(double)in_x y:(double)in_y z:(double)in_z
+-(id)initWithX:(double)in_x Y:(double)in_y Z:(double)in_z
 {
     self = [super init];
 	x = in_x;
@@ -36,7 +36,7 @@
 	double x0 = y*t1->z - z*t1->y;
 	double y0 = z*t1->x - x*t1->z;
 	double z0 = x*t1->y - y*t1->x;
-    WVTuple* ret = [[WVTuple alloc] initWithX:x0 y:y0 z:z0];
+    WVTuple* ret = [[WVTuple alloc] initWithX:x0 Y:y0 Z:z0];
     return ret;
 }
 -(WVTuple*)mul:(double)v {

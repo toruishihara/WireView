@@ -16,4 +16,6 @@
 
 @property (strong, nonatomic) WVViewController *viewController;
 
+@property (strong, nonatomic) NSArray   *tris;
+
 @end

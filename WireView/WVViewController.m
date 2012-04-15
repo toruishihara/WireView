@@ -14,6 +14,7 @@
 
 @implementation WVViewController
 @synthesize drawview;
+@synthesize poleview;
 
 - (void)viewDidLoad
 {

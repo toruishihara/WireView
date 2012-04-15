@@ -18,6 +18,9 @@
 		2DCBBC231534C0A1001BE91E /* WVViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DCBBC211534C0A1001BE91E /* WVViewController_iPad.xib */; };
 		2DCBBC2B1534C0E7001BE91E /* WVDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBBC2A1534C0E7001BE91E /* WVDrawView.m */; };
 		2DCBBC321534C28F001BE91E /* WVTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBBC311534C28F001BE91E /* WVTuple.m */; };
+		2DCBBC391537A479001BE91E /* WVSTLfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBBC381537A479001BE91E /* WVSTLfile.m */; };
+		2DCBBC3C1537A83B001BE91E /* diamond.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2DCBBC3A1537A83B001BE91E /* diamond.txt */; };
+		2DCBBC3F1538BFCD001BE91E /* WVPoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBBC3E1538BFCD001BE91E /* WVPoleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,11 @@
 		2DCBBC2A1534C0E7001BE91E /* WVDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVDrawView.m; sourceTree = "<group>"; };
 		2DCBBC301534C28F001BE91E /* WVTuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVTuple.h; sourceTree = "<group>"; };
 		2DCBBC311534C28F001BE91E /* WVTuple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVTuple.m; sourceTree = "<group>"; };
+		2DCBBC371537A479001BE91E /* WVSTLfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVSTLfile.h; sourceTree = "<group>"; };
+		2DCBBC381537A479001BE91E /* WVSTLfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVSTLfile.m; sourceTree = "<group>"; };
+		2DCBBC3B1537A83B001BE91E /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = WireView/en.lproj/diamond.txt; sourceTree = "<group>"; };
+		2DCBBC3D1538BFCD001BE91E /* WVPoleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVPoleView.h; sourceTree = "<group>"; };
+		2DCBBC3E1538BFCD001BE91E /* WVPoleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVPoleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +93,14 @@
 		2DCBBC0F1534C0A0001BE91E /* WireView */ = {
 			isa = PBXGroup;
 			children = (
+				2DCBBC301534C28F001BE91E /* WVTuple.h */,
+				2DCBBC311534C28F001BE91E /* WVTuple.m */,
+				2DCBBC291534C0E7001BE91E /* WVDrawView.h */,
+				2DCBBC2A1534C0E7001BE91E /* WVDrawView.m */,
+				2DCBBC3D1538BFCD001BE91E /* WVPoleView.h */,
+				2DCBBC3E1538BFCD001BE91E /* WVPoleView.m */,
+				2DCBBC371537A479001BE91E /* WVSTLfile.h */,
+				2DCBBC381537A479001BE91E /* WVSTLfile.m */,
 				2DCBBC181534C0A1001BE91E /* WVAppDelegate.h */,
 				2DCBBC191534C0A1001BE91E /* WVAppDelegate.m */,
 				2DCBBC1B1534C0A1001BE91E /* WVViewController.h */,
@@ -92,10 +108,6 @@
 				2DCBBC1E1534C0A1001BE91E /* WVViewController_iPhone.xib */,
 				2DCBBC211534C0A1001BE91E /* WVViewController_iPad.xib */,
 				2DCBBC101534C0A0001BE91E /* Supporting Files */,
-				2DCBBC291534C0E7001BE91E /* WVDrawView.h */,
-				2DCBBC2A1534C0E7001BE91E /* WVDrawView.m */,
-				2DCBBC301534C28F001BE91E /* WVTuple.h */,
-				2DCBBC311534C28F001BE91E /* WVTuple.m */,
 			);
 			path = WireView;
 			sourceTree = "<group>";
@@ -103,6 +115,7 @@
 		2DCBBC101534C0A0001BE91E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2DCBBC3A1537A83B001BE91E /* diamond.txt */,
 				2DCBBC111534C0A0001BE91E /* WireView-Info.plist */,
 				2DCBBC121534C0A0001BE91E /* InfoPlist.strings */,
 				2DCBBC151534C0A0001BE91E /* main.m */,
@@ -165,6 +178,7 @@
 				2DCBBC141534C0A0001BE91E /* InfoPlist.strings in Resources */,
 				2DCBBC201534C0A1001BE91E /* WVViewController_iPhone.xib in Resources */,
 				2DCBBC231534C0A1001BE91E /* WVViewController_iPad.xib in Resources */,
+				2DCBBC3C1537A83B001BE91E /* diamond.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +194,8 @@
 				2DCBBC1D1534C0A1001BE91E /* WVViewController.m in Sources */,
 				2DCBBC2B1534C0E7001BE91E /* WVDrawView.m in Sources */,
 				2DCBBC321534C28F001BE91E /* WVTuple.m in Sources */,
+				2DCBBC391537A479001BE91E /* WVSTLfile.m in Sources */,
+				2DCBBC3F1538BFCD001BE91E /* WVPoleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +224,15 @@
 				2DCBBC221534C0A1001BE91E /* en */,
 			);
 			name = WVViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		2DCBBC3A1537A83B001BE91E /* diamond.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DCBBC3B1537A83B001BE91E /* en */,
+			);
+			name = diamond.txt;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

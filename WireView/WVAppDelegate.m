@@ -9,11 +9,13 @@
 #import "WVAppDelegate.h"
 
 #import "WVViewController.h"
+#import "WVSTLfile.h"
 
 @implementation WVAppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
+@synthesize tris;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -26,6 +28,8 @@
     }
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    [WVSTLfile read];
     return YES;
 }
 

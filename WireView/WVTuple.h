@@ -15,6 +15,7 @@
     char    type; // 0:xyz or 1:sphere
 }
 
+- (id)initWithX:(double)in_x Y:(double)in_y Z:(double)in_z;
 - (double)dot:(WVTuple*)t1;
 - (WVTuple*)unify;
 - (WVTuple*)cross:(WVTuple*)t1;

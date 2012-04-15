@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "WVDrawView.h"
+#import "WVPoleView.h"
 
 @interface WVViewController : UIViewController
 @property (nonatomic, assign) IBOutlet WVDrawView* drawview;
-
+@property (nonatomic, assign) IBOutlet WVPoleView* poleview;
 
 @end
