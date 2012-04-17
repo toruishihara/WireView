@@ -10,4 +10,6 @@
 
 @interface WVPoleView : UIView
 
+@property (nonatomic, assign) UIView* drawview;
+
 @end

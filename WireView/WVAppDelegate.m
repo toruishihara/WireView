@@ -31,8 +31,10 @@
     [self.window makeKeyAndVisible];
     
     [WVSTLfile read];
-    poleUnitZ = [[[Tuple alloc]initWithX:0.7 Y:0.2 Z:0.3] unify];
-    poleUnitY = [[poleUnitZ cross:[[Tuple alloc]initWithX:1 Y:0 Z:0]] unify];
+    double a = 0.5;
+    poleUnitZ = [[Tuple alloc]initWithX:a Y:a Z:a];
+    [poleUnitZ unify];
+    poleUnitY = [[poleUnitZ cross:[[Tuple alloc]initWithX:1.0 Y:0.0 Z:0.0]] unify];
     poleUnitX = [poleUnitY cross:poleUnitZ];
     return YES;
 }

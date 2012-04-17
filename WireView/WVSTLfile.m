@@ -15,7 +15,7 @@
 + (void)read
 {
     @try {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"diamond" ofType:@"txt"];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"diamond" ofType:@"stl"];
         //NSLog([path substringToIndex:100]);
         //NSLog([path substringFromIndex:100]);
  

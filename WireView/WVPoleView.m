@@ -6,10 +6,15 @@
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import "WVPoleView.h"
 #include <math.h>
+#import "WVPoleView.h"
+#import "WVAppDelegate.h"
+#import "WVViewController.h"
+#import "Tuple.h"
 
 @implementation WVPoleView
+
+@synthesize drawview;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -63,6 +68,14 @@
 }
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    WVAppDelegate *app = [UIApplication sharedApplication].delegate;
+
+    Tuple *inc = [[Tuple alloc] initWithX:0.1 Y:0.2 Z:0.3];
+    [[app.poleUnitZ add:inc] unify];
+    app.poleUnitY = [[app.poleUnitZ cross:[[Tuple alloc]initWithX:1.0 Y:0.0 Z:0.0]] unify];
+    app.poleUnitX = [app.poleUnitY cross:app.poleUnitZ];
+    
+    [drawview setNeedsDisplay];
 }
 
 @end
