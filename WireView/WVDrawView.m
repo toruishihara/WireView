@@ -52,5 +52,39 @@
         ++j;
     }
 }
+#pragma mark -
+#pragma mark === Touch handling  ===
+#pragma mark
+-(void)moveViewPole:(NSSet *)touches
+{
+    WVAppDelegate *app = [UIApplication sharedApplication].delegate;
+    int width = [self bounds].size.width;
+    double x, y;
+    for (UITouch *touch in touches) {
+        x = [touch locationInView:self].x - width/2;
+        x /= (double)(width/4);
+        y = [touch locationInView:self].y - width/2;
+        y /= (double)(width/4);
+        [app.poleUnitZ initWithR:1.0 Th:atan2(y,x) Ph:sqrt(x*x + y*y)*M_PI_2];
+        [app.poleUnitZ sp2xy];
+        app.poleUnitY = [[app.poleUnitZ cross:[[Tuple alloc]initWithX:1.0 Y:0.0 Z:0.0]] unify];
+        app.poleUnitX = [app.poleUnitY cross:app.poleUnitZ];
+    }
+    [self setNeedsDisplay];
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event 
+{    
+    [self moveViewPole:touches];
+}
+
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{  
+    [self moveViewPole:touches];
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+}
 
 @end

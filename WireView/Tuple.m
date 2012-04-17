@@ -20,6 +20,16 @@
     return self;
 }
 
+- (id)initWithR:(double)in_r Th:(double)in_th Ph:(double)in_ph
+{
+    self = [super init];
+	x = (double)in_r;
+	y = (double)in_th;
+	z = (double)in_ph;
+    type = sphere;
+    return self;
+}
+
 - (id)initWithTuple:(Tuple*)t
 {
     self = [super init];
@@ -83,17 +93,27 @@
 	z = r*cos(ph);
     return self;
 }
+
 - (Tuple*)xy2sp {
 	double r = sqrt(x*x + y*y + z*z);
-    if (r < 0.000001)
-        return self;
+    if (r < 0.000001) {
+        r = 0.000001;
+    }
 	double th = atan2(y,x);
-	double ph = acos(z/r);
+    double ph;
+    @try {
+        ph = acos(z/r);
+    }
+    @catch (NSException *exception) {
+    }
+    @finally {
+    }
 	x = r;
 	y = th;
 	z = ph;
     return self;
 }
+
 - (NSString*)str {
     if (type == 0) {
         return [[NSString alloc] initWithFormat:@"xyz[%f,%f,%f]", x, y, z];

@@ -20,6 +20,7 @@ typedef enum cordination {
 }
 
 - (id)initWithX:(double)in_x Y:(double)in_y Z:(double)in_z;
+- (id)initWithR:(double)in_r Th:(double)in_th Ph:(double)in_ph;
 - (id)initWithTuple:(Tuple*)t;
 - (double)dot:(Tuple*)t;
 - (Tuple*)unify;
