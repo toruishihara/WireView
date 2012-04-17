@@ -7,15 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Tuple.h"
 
 @class WVViewController;
 
 @interface WVAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 @property (strong, nonatomic) WVViewController *viewController;
 
-@property (strong, nonatomic) NSArray   *tris;
+@property (strong, nonatomic) NSArray   *triangles;
+@property (strong, nonatomic) Tuple     *poleUnitZ;
+@property (strong, nonatomic) Tuple     *poleUnitX;
+@property (strong, nonatomic) Tuple     *poleUnitY;
 
 @end

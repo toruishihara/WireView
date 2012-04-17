@@ -39,12 +39,12 @@
                 double x = [[arr objectAtIndex:idx+1] doubleValue];
                 double y = [[arr objectAtIndex:idx+2] doubleValue];
                 double z = [[arr objectAtIndex:idx+3] doubleValue];
-                WVTuple *tuple = [[WVTuple alloc]initWithX:(double)x Y:(double)y Z:(double)z];
+                Tuple *tuple = [[Tuple alloc]initWithX:(double)x Y:(double)y Z:(double)z];
                 [ma addObject:tuple];
             }
         }
         WVAppDelegate *app = [UIApplication sharedApplication].delegate;
-        app.tris = [[NSArray alloc]initWithArray:ma];
+        app.triangles = [[NSArray alloc]initWithArray:ma];
     }
     @catch (NSException *e) {
         NSLog(@"err=%@",e.name);

@@ -15,7 +15,8 @@
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
-@synthesize tris;
+@synthesize triangles;
+@synthesize poleUnitZ,poleUnitX,poleUnitY;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -30,6 +31,9 @@
     [self.window makeKeyAndVisible];
     
     [WVSTLfile read];
+    poleUnitZ = [[[Tuple alloc]initWithX:0.7 Y:0.2 Z:0.3] unify];
+    poleUnitY = [[poleUnitZ cross:[[Tuple alloc]initWithX:1 Y:0 Z:0]] unify];
+    poleUnitX = [poleUnitY cross:poleUnitZ];
     return YES;
 }
 

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WVTuple.h"
+#import "Tuple.h"
 
 @interface WVSTLfile : NSObject
 

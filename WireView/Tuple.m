@@ -6,9 +6,9 @@
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import "WVTuple.h"
+#import "Tuple.h"
 
-@implementation WVTuple : NSObject
+@implementation Tuple : NSObject
 
 -(id)initWithX:(double)in_x Y:(double)in_y Z:(double)in_z
 {
@@ -16,12 +16,22 @@
 	x = in_x;
 	y = in_y;
 	z = in_z;
-    type = 0;
+    type = xyz;
     return self;
 }
 
--(double)dot:(WVTuple*)t1 {
-	return x*t1->x + y*t1->y + z*t1->z;
+-(id)initWithTuple:(Tuple*)t
+{
+    self = [super init];
+	x = t->x;
+	y = t->y;
+	z = t->z;
+    type = t->type;
+    return self;
+}
+
+-(double)dot:(Tuple*)t {
+	return x*t->x + y*t->y + z*t->z;
 }
 
 -(void)unify {
@@ -32,32 +42,36 @@
 	z = z / len;
 }
 
--(id)cross:(WVTuple*)t1 {
-	double x0 = y*t1->z - z*t1->y;
-	double y0 = z*t1->x - x*t1->z;
-	double z0 = x*t1->y - y*t1->x;
-    WVTuple* ret = [[WVTuple alloc] initWithX:x0 Y:y0 Z:z0];
+-(id)cross:(Tuple*)t {
+	double tmpX = y*t->z - z*t->y;
+	double tmpY = z*t->x - x*t->z;
+	double tmpZ = x*t->y - y*t->x;
+    Tuple* ret = [[Tuple alloc] initWithX:tmpX Y:tmpY Z:tmpZ];
     return ret;
 }
--(WVTuple*)mul:(double)v {
+-(id)clone {
+    Tuple* ret = [[Tuple alloc] initWithX:x Y:y Z:z];
+    return ret;
+}
+-(Tuple*)mul:(double)v {
 	x *= v;
 	y *= v;
 	z *= v;
     return self;
 }
--(WVTuple*)add:(WVTuple*)t1 {
-	x = x + t1->x;
-	y = y + t1->y;
-	z = z + t1->z;
+-(Tuple*)add:(Tuple*)t {
+	x = x + t->x;
+	y = y + t->y;
+	z = z + t->z;
     return self;
 }
--(WVTuple*)sub:(WVTuple *)t1 {
-	x = x - t1->x;
-	y = y - t1->y;
-	z = z - t1->z;
+-(Tuple*)sub:(Tuple *)t {
+	x = x - t->x;
+	y = y - t->y;
+	z = z - t->z;
     return self;
 }
--(WVTuple*)sp2xy {
+-(Tuple*)sp2xy {
 	double r = x;
 	double th = y;
 	double ph = z;
@@ -66,7 +80,7 @@
 	z = r*cos(ph);
     return self;
 }
--(WVTuple*)xy2sp {
+-(Tuple*)xy2sp {
 	double r = sqrt(x*x + y*y + z*z);
 	double th = atan(y/x);
 	double ph = acos(z/r);

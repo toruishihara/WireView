@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D2B9516153D2EE2007E1A59 /* Tuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2B9515153D2EE2007E1A59 /* Tuple.m */; };
 		2DCBBC0A1534C0A0001BE91E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCBBC091534C0A0001BE91E /* UIKit.framework */; };
 		2DCBBC0C1534C0A0001BE91E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCBBC0B1534C0A0001BE91E /* Foundation.framework */; };
 		2DCBBC0E1534C0A0001BE91E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCBBC0D1534C0A0001BE91E /* CoreGraphics.framework */; };
@@ -17,13 +18,13 @@
 		2DCBBC201534C0A1001BE91E /* WVViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DCBBC1E1534C0A1001BE91E /* WVViewController_iPhone.xib */; };
 		2DCBBC231534C0A1001BE91E /* WVViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DCBBC211534C0A1001BE91E /* WVViewController_iPad.xib */; };
 		2DCBBC2B1534C0E7001BE91E /* WVDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBBC2A1534C0E7001BE91E /* WVDrawView.m */; };
-		2DCBBC321534C28F001BE91E /* WVTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBBC311534C28F001BE91E /* WVTuple.m */; };
 		2DCBBC391537A479001BE91E /* WVSTLfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBBC381537A479001BE91E /* WVSTLfile.m */; };
 		2DCBBC3C1537A83B001BE91E /* diamond.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2DCBBC3A1537A83B001BE91E /* diamond.txt */; };
 		2DCBBC3F1538BFCD001BE91E /* WVPoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBBC3E1538BFCD001BE91E /* WVPoleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D2B9515153D2EE2007E1A59 /* Tuple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tuple.m; sourceTree = "<group>"; };
 		2DCBBC051534C0A0001BE91E /* WireView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WireView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCBBC091534C0A0001BE91E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2DCBBC0B1534C0A0001BE91E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -40,8 +41,7 @@
 		2DCBBC221534C0A1001BE91E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WVViewController_iPad.xib; sourceTree = "<group>"; };
 		2DCBBC291534C0E7001BE91E /* WVDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVDrawView.h; sourceTree = "<group>"; };
 		2DCBBC2A1534C0E7001BE91E /* WVDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVDrawView.m; sourceTree = "<group>"; };
-		2DCBBC301534C28F001BE91E /* WVTuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVTuple.h; sourceTree = "<group>"; };
-		2DCBBC311534C28F001BE91E /* WVTuple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVTuple.m; sourceTree = "<group>"; };
+		2DCBBC301534C28F001BE91E /* Tuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tuple.h; sourceTree = "<group>"; };
 		2DCBBC371537A479001BE91E /* WVSTLfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WVSTLfile.h; sourceTree = "<group>"; };
 		2DCBBC381537A479001BE91E /* WVSTLfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WVSTLfile.m; sourceTree = "<group>"; };
 		2DCBBC3B1537A83B001BE91E /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = WireView/en.lproj/diamond.txt; sourceTree = "<group>"; };
@@ -93,8 +93,8 @@
 		2DCBBC0F1534C0A0001BE91E /* WireView */ = {
 			isa = PBXGroup;
 			children = (
-				2DCBBC301534C28F001BE91E /* WVTuple.h */,
-				2DCBBC311534C28F001BE91E /* WVTuple.m */,
+				2DCBBC301534C28F001BE91E /* Tuple.h */,
+				2D2B9515153D2EE2007E1A59 /* Tuple.m */,
 				2DCBBC291534C0E7001BE91E /* WVDrawView.h */,
 				2DCBBC2A1534C0E7001BE91E /* WVDrawView.m */,
 				2DCBBC3D1538BFCD001BE91E /* WVPoleView.h */,
@@ -193,9 +193,9 @@
 				2DCBBC1A1534C0A1001BE91E /* WVAppDelegate.m in Sources */,
 				2DCBBC1D1534C0A1001BE91E /* WVViewController.m in Sources */,
 				2DCBBC2B1534C0E7001BE91E /* WVDrawView.m in Sources */,
-				2DCBBC321534C28F001BE91E /* WVTuple.m in Sources */,
 				2DCBBC391537A479001BE91E /* WVSTLfile.m in Sources */,
 				2DCBBC3F1538BFCD001BE91E /* WVPoleView.m in Sources */,
+				2D2B9516153D2EE2007E1A59 /* Tuple.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +326,7 @@
 				2DCBBC281534C0A1001BE91E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
