@@ -7,6 +7,7 @@
 //
 
 #import "WVViewController.h"
+#import "WVAppDelegate.h"
 
 @interface WVViewController ()
 
@@ -15,6 +16,7 @@
 @implementation WVViewController
 @synthesize drawview;
 @synthesize poleview;
+@synthesize zoomSlider;
 
 - (void)viewDidLoad
 {
@@ -35,6 +37,17 @@
     } else {
         return YES;
     }
+}
+
+- (IBAction) zoomChanged:(UISlider *)sender {
+    WVAppDelegate *app = [UIApplication sharedApplication].delegate;
+    //NSLog(@"ZoomSlider=%f exp(0)=%f exp(1)=%f", (double)[sender value], (double)exp(0), (double)exp(1));
+    app.zoomValue = app.defaultZoomValue*exp(1.2*([sender value] - 1.0));
+    [drawview setNeedsDisplay];
+}
+
+- (IBAction)controlPinch:(UIPinchGestureRecognizer *)recognizer {
+    NSLog(@"zoom");
 }
 
 @end

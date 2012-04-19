@@ -20,5 +20,8 @@
 @property (strong, nonatomic) Tuple     *poleUnitZ;
 @property (strong, nonatomic) Tuple     *poleUnitX;
 @property (strong, nonatomic) Tuple     *poleUnitY;
+@property (strong, nonatomic) Tuple     *centerPoint;
+@property (assign, nonatomic) double     defaultZoomValue;
+@property (assign, nonatomic) double     zoomValue;
 
 @end

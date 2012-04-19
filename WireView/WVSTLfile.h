@@ -11,7 +11,7 @@
 
 @interface WVSTLfile : NSObject
 
-
 + (void)read;
++ (NSString*)chopExtraSpace:(NSString*)in_str;
 
 @end

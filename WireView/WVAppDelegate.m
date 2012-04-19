@@ -17,6 +17,9 @@
 @synthesize viewController = _viewController;
 @synthesize triangles;
 @synthesize poleUnitZ,poleUnitX,poleUnitY;
+@synthesize centerPoint;
+@synthesize zoomValue;
+@synthesize defaultZoomValue;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -29,6 +32,9 @@
     }
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    centerPoint = [[Tuple alloc] init];
+    zoomValue = 1.0;
     
     [WVSTLfile read];
     double a = 0.5;

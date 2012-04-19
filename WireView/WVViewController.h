@@ -13,5 +13,10 @@
 @interface WVViewController : UIViewController
 @property (nonatomic, assign) IBOutlet WVDrawView* drawview;
 @property (nonatomic, assign) IBOutlet WVPoleView* poleview;
+@property (nonatomic, assign) IBOutlet UISlider* zoomSlider;
+
+- (IBAction)zoomChanged:(id)sender;
+
+- (IBAction)controlPinch:(UIPinchGestureRecognizer *)recognizer;
 
 @end

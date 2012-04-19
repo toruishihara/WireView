@@ -26,16 +26,15 @@
 {
     WVAppDelegate *app = [UIApplication sharedApplication].delegate;
     CGContextRef context    = UIGraphicsGetCurrentContext();
-
     CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
-
     CGContextSetLineWidth(context, 1.0);
 
     Tuple* tuples[3];
-    double zoom = 40;
+    double zoom = app.zoomValue;
     int j=0;
     for (id i in app.triangles) {
         tuples[j%3] = [[Tuple alloc]initWithTuple:i];
+        [tuples[j%3] sub:app.centerPoint];
         if (j%3 == 2) {
             double x0 = 160 + zoom*[tuples[0] dot:app.poleUnitX];
             double y0 = 160 + zoom*[tuples[0] dot:app.poleUnitY];
@@ -52,6 +51,7 @@
         ++j;
     }
 }
+
 #pragma mark -
 #pragma mark === Touch handling  ===
 #pragma mark
@@ -64,6 +64,7 @@
         x = [touch locationInView:self].x - width/2;
         x /= (double)(width/4);
         y = [touch locationInView:self].y - width/2;
+        y *= -1.0;
         y /= (double)(width/4);
         [app.poleUnitZ initWithR:1.0 Th:atan2(y,x) Ph:sqrt(x*x + y*y)*M_PI_2];
         [app.poleUnitZ sp2xy];

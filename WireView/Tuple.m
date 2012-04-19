@@ -10,24 +10,40 @@
 
 @implementation Tuple : NSObject
 
+- (id)init
+{
+    self = [super init];
+    [self setX:0.0 Y:0.0 Z:0.0];
+    return self;
+}
+
 - (id)initWithX:(double)in_x Y:(double)in_y Z:(double)in_z
 {
     self = [super init];
-	x = (double)in_x;
-	y = (double)in_y;
-	z = (double)in_z;
-    type = xyz;
+    [self setX:in_x Y:in_y Z:in_z];
     return self;
 }
 
 - (id)initWithR:(double)in_r Th:(double)in_th Ph:(double)in_ph
 {
     self = [super init];
+    [self setR:in_r Th:in_th Ph:in_ph];
+    return self;
+}
+- (void)setX:(double)in_x Y:(double)in_y Z:(double)in_z
+{
+	x = (double)in_x;
+	y = (double)in_y;
+	z = (double)in_z;
+    type = xyz;
+}
+
+- (void)setR:(double)in_r Th:(double)in_th Ph:(double)in_ph
+{
 	x = (double)in_r;
 	y = (double)in_th;
 	z = (double)in_ph;
     type = sphere;
-    return self;
 }
 
 - (id)initWithTuple:(Tuple*)t
