@@ -71,8 +71,8 @@
     WVAppDelegate *app = [UIApplication sharedApplication].delegate;
 
     Tuple *inc = [[Tuple alloc] initWithX:0.1 Y:0.2 Z:0.3];
-    [[app.poleUnitZ add:inc] unify];
-    app.poleUnitY = [[app.poleUnitZ cross:[[Tuple alloc]initWithX:1.0 Y:0.0 Z:0.0]] unify];
+    [[app.poleUnitZ add:inc] setLength:1.0];
+    app.poleUnitY = [[app.poleUnitZ cross:[[Tuple alloc]initWithX:1.0 Y:0.0 Z:0.0]] setLength:1.0];
     app.poleUnitX = [app.poleUnitY cross:app.poleUnitZ];
     
     [drawview setNeedsDisplay];

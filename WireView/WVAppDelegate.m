@@ -39,8 +39,8 @@
     [WVSTLfile read];
     double a = 0.5;
     poleUnitZ = [[Tuple alloc]initWithX:a Y:a Z:a];
-    [poleUnitZ unify];
-    poleUnitY = [[poleUnitZ cross:[[Tuple alloc]initWithX:1.0 Y:0.0 Z:0.0]] unify];
+    [poleUnitZ setLength:1.0];
+    poleUnitY = [[poleUnitZ cross:[[Tuple alloc]initWithX:1.0 Y:0.0 Z:0.0]] setLength:1.0];
     poleUnitX = [poleUnitY cross:poleUnitZ];
     return YES;
 }
