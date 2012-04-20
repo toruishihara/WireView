@@ -8,16 +8,16 @@
 
 #import "WVSTLfile.h"
 #import "WVAppDelegate.h"
+#import "NSString+Chop.h"
 
 @implementation WVSTLfile
-
 
 + (void)read
 {
     @try {
         double max[3] = {-1*MAXFLOAT, -1*MAXFLOAT, -1*MAXFLOAT};
         double min[3] = {MAXFLOAT, MAXFLOAT, MAXFLOAT};
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"Cessna172" ofType:@"stl"];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"diamond" ofType:@"stl"];
         //NSLog([path substringToIndex:100]);
         //NSLog([path substringFromIndex:100]);
  
@@ -28,8 +28,8 @@
         NSEnumerator *enum1 = [texts objectEnumerator];
         
         while (oneLine = [enum1 nextObject]) {
-            NSString* choppedOneLine = [WVSTLfile chopExtraSpace:oneLine]; // should use category
-            NSArray *arr = [choppedOneLine componentsSeparatedByCharactersInSet:
+            [oneLine chopExtraSpace];
+            NSArray *arr = [oneLine componentsSeparatedByCharactersInSet:
                             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
             int idx = [arr indexOfObject:@"vertex"];
             if (idx >=0 && idx < [arr count]) {
@@ -51,8 +51,8 @@
         NSMutableArray *ma = [[NSMutableArray alloc]initWithCapacity:2000];
         
         while (oneLine = [enum2 nextObject]) {
-            NSString* choppedOneLine = [WVSTLfile chopExtraSpace:oneLine]; // should use category
-            NSArray *arr = [choppedOneLine componentsSeparatedByCharactersInSet:
+            [oneLine chopExtraSpace];
+            NSArray *arr = [oneLine componentsSeparatedByCharactersInSet:
                             [NSCharacterSet whitespaceAndNewlineCharacterSet]];
             int idx = [arr indexOfObject:@"vertex"];
             if (idx >=0 && idx < [arr count]) {
@@ -80,26 +80,5 @@
 
 }
 
-+ (NSString*)chopExtraSpace:(NSString*)in_str
-{
-    int i;
-    unsigned char c;
-    unsigned char last_c = 0;
-    NSMutableString *str = [[NSMutableString alloc]init];
-
-    for(i=0;i<[in_str length];++i) {
-        c = [in_str characterAtIndex:i];
-        if (c <= ' ') {
-            if (last_c > ' ') {
-                [str appendFormat:@" "];
-            }
-        } else {
-            [str appendFormat:@"%c", c];
-        }
-        last_c = c;
-    }
-    
-    return [NSString stringWithString:str];
-}
 
 @end
